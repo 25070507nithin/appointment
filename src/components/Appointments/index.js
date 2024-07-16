@@ -67,8 +67,9 @@ class Appointments extends Component {
   }
 
   render() {
-    const {titleInput, dateInput} = this.state
+    const {titleInput, dateInput, isFilterActive} = this.state
     const filteredList = this.filteredAppointmentList()
+    const classNameFilter = isFilterActive ? 'filter' : ''
     return (
       <div className="app-container">
         <div className="appointment-container">
@@ -112,7 +113,11 @@ class Appointments extends Component {
 
           <div className="appointment-starred-container">
             <h1>Appointments</h1>
-            <button type="button" onClick={this.onClickStarred}>
+            <button
+              className={classNameFilter}
+              type="button"
+              onClick={this.onClickStarred}
+            >
               Starred
             </button>
           </div>

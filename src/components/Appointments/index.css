@@ -43,3 +43,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+.filter {
+  background-color: blue;
+  color: white;
+  border-radius: 15px;
+  height: 30px;
+  width: 70px;
+  border: 1px solid white;
+}
